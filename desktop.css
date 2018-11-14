@@ -66,33 +66,17 @@ nav {
   height: calc(6pt + .5vw);
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin: 0 auto;
-  height: 50vw;
-}
-
-.headerleft {
-  display: flex;
-  flex-direction: column;
-  width: 65%;
-  height: 100%;
-}
-
 .featureblock {
-  width: 100%;
-  height: 75%;
   box-sizing: border-box;
   display: flex;
   border: solid 1vw white;
+  width: 90%;
+  height: 40vw;
+  margin: auto auto;
   align-items: center;
   justify-content: space-between;
-  background-image: url(assets/Images/WorkSamples/alphabet.png);
-  background-repeat: no-repeat;
-  background-position: -6vw -.4vw;
-  background-size: cover;
+  background-image: url(assets/Images/jase-ess-326826-unsplash.jpg);
+  background-size: contain;
   image-rendering: optimizeSpeed;
   image-resolution: 60dpi;
 }
@@ -122,126 +106,63 @@ header {
   margin-right: 5%;
 }
 
-.miniheader {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 100%;
-  height: 25%;
-}
-.minifeature {
-  box-sizing: border-box;
-  border: solid .5vw white;
-  width: 31%;
-  height: 90%;
-background-color: lightgrey;
-overflow: hidden;
-}
-
-.minifeature img {
-  width: 100%;
-}
-
-.minifeature .iconone {
-  margin-top: -3vw;
-}
-
-.headerright {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 33%;
-  height: 100%;
-}
-.smalltopblock {
-  display: flex;
-  width: 100%;
-  height: 25%;
-  background-color: white;
-}
-
-.profiletextbox {
-  width: 60%;
-  font-size: 1.4vw;
-  line-height: .5;
-  text-align: right;
-  margin: auto 0;
-  margin-right: 1vw;
-  
-}
-
-.profiletextbox .socialmedia {
-  margin-top: -2.3vw;
-  opacity: .5;
-}
-
-.profiletextbox p {
-  font-size: 1.2vw;
-}
-
-.profileimg {
-  width: 40%;
-  height: 85%;
-  margin: auto 0;
-  margin-right: 5%;
-  background-image: url(assets/Images/profileimg.jpg);
-  background-size: cover;
-  overflow: hidden;
-  background-position: -2.5vw 0;
-}
-
-.largebottomblock {
-  width: 100%;
-  height: 73%;
-  padding: 2% 6%;
-  box-sizing: border-box;
-  background-color: white;
-}
-
-.largebottomblock .text h3 {
-  font-size: 2vw;
-}
-
-.largebottomblock .text p {
-  font-size: 1.5vw;
-}
-
 .body {
   display: flex;
   flex-direction: column;
   width: 90%;
+  align-items: center;
   margin: auto;
 }
 
 .headline {
+  text-align: center;
+  margin: 5vw auto;
   font-size: 2vw;
   color:#525252;
-  margin-top: 4vw;
 }
 
 .grid {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 35vw;
+  height: 40vw;
   justify-content: space-between;
 
 }
 
 .post {
   width: 22.5%;
-  height: 42%;
-  margin-bottom: 1%;
+  height: 28.5%;
+  margin-bottom: 3%;
   object-fit: contain;
   overflow: hidden;
+
 }
 
 .post img {
+  margin-top: -2vw;
   width: 100%;
   image-rendering: optimizeSpeed;
   image-resolution: 60dpi;
 }
 
+.view {
+  display: flex;
+  width: 24vw;
+  height: 4vw;
+  margin: 2vw auto 4vw auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #B7B7AF;
+  background-image: url("assets/textures/az_subtle.png");
+  background-blend-mode: multiply;
+  font-size: 1.8vw;
+  color: white;
+}
+.view:hover {
+  background-color: rgba(0, 0, 0, .25);
+
+}
 
 .footer {
   height: 100%;
@@ -292,8 +213,6 @@ overflow: hidden;
 }
 
 .leftfooter, .midfooter, .rightfooter{
-  display: block;
-  box-sizing: border-box;
   width: 33.3%;
   height: 100%;
   margin-top: 3%;
@@ -322,9 +241,8 @@ margin-right: 0;
 }
 
 .link a {
-  display: block;
-  margin: 0 .6vw;
-  font-size: calc(2pt + 1vw);
+  margin: 0 .8vw;
+  font-size: calc(3pt + .8vw);
   color: #6F6F6F;
 }
 
@@ -400,4 +318,36 @@ margin-right: 0;
   height: 120%;
   image-rendering: optimizeSpeed;
   image-resolution: 60dpi;
+}
+
+
+@media only screen and (max-width: 850px) {
+
+  .grid {
+    height: 70vw;
+  }
+
+  .post {
+    width: 31%;
+    height: 21%;
+    margin-bottom: 3%;
+  }
+
+  .footerlogo {
+    min-height: 30px;
+  }
+  .rightfooter {
+    display: none;
+  }
+  .leftfooter, .midfooter {
+    width: 50%;
+  }
+
+  .leftfooter {
+    margin-left: -2%;
+  }
+
+  .midfooter {
+    margin-right: 5%;
+  }
 }
